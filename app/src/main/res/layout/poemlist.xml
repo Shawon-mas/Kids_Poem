@@ -1,35 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.cardview.widget.CardView
-
+<RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    app:cardCornerRadius="10dp"
-    android:layout_width="160dp"
-    android:layout_height="200dp"
-    app:cardBackgroundColor="#ED9DA5CF"
-    android:layout_margin="10dp"
-    app:cardElevation="8dp"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
     >
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
-        <ImageView
-            android:id="@+id/poem_thumbnils"
-            android:scaleType="fitXY"
-            android:src="@drawable/person"
-            android:layout_width="match_parent"
-            android:layout_height="170dp"/>
-        <TextView
-            android:layout_alignParentBottom="true"
-            android:id="@+id/poem_title"
-            android:layout_centerInParent="true"
-            android:textColor="#FF6D00"
-            android:text="Poem Title"
-            android:textSize="20dp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-           />
+    <ImageView
+        android:adjustViewBounds="true"
+        android:layout_width="400dp"
+        android:layout_height="380dp"
+        android:id="@+id/viewpager_image"/>
 
-    </RelativeLayout>
 
-</androidx.cardview.widget.CardView>
+
+</RelativeLayout>

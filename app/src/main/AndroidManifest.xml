@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.kidspoem.kidspoem">
-    <uses-permission android:name="android.permission.INTERNET"/>
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="com.google.android.gms.permission.AD_ID"/>
+
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -9,9 +13,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.KidsPoem">
-        <activity android:name=".PoemActivity"></activity>
-        <activity android:name=".LettersActivity" />
-        <activity android:name=".NumberActivity" />
+        <activity android:name=".StoryActivity"></activity>
+        <activity android:name=".PlayerActivity">
+
+        </activity>
         <activity android:name=".HomeActivity" />
         <activity android:name=".SplashActivity">
             <intent-filter>
@@ -24,6 +29,9 @@
         <meta-data
             android:name="preloaded_fonts"
             android:resource="@array/preloaded_fonts" />
+        <meta-data
+            android:name="com.google.android.gms.ads.APPLICATION_ID"
+            android:value="ca-app-pub-7766119742197007~3371986418"/>
     </application>
 
 </manifest>
