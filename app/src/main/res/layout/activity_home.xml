@@ -4,7 +4,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-
     android:orientation="vertical"
     android:background="@drawable/bg"
     tools:context=".HomeActivity">
@@ -24,7 +23,7 @@
 
     <LinearLayout
         android:weightSum="2"
-        android:orientation="horizontal"
+        android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
@@ -40,8 +39,8 @@
             app:cardUseCompatPadding="true"
             android:layout_margin="5dp"
             android:layout_weight="1"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content">
+            android:layout_width="match_parent"
+            android:layout_height="0dp">
             <LinearLayout
                 android:gravity="center"
                 android:layout_gravity="center_vertical|center_horizontal"
@@ -51,7 +50,7 @@
                 <com.airbnb.lottie.LottieAnimationView
                     app:lottie_loop="true"
                     app:lottie_autoPlay="true"
-                    android:layout_width="100dp"
+                    android:layout_width="150dp"
                     android:layout_height="100dp"
                     app:lottie_rawRes="@raw/poem"/>
 
@@ -77,8 +76,8 @@
             app:cardUseCompatPadding="true"
             android:layout_margin="5dp"
             android:layout_weight="1"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content">
+            android:layout_width="match_parent"
+            android:layout_height="0dp">
             <LinearLayout
                 android:layout_gravity="center_vertical|center_horizontal"
                 android:gravity="center"
@@ -88,7 +87,7 @@
                 <com.airbnb.lottie.LottieAnimationView
                     app:lottie_loop="true"
                     app:lottie_autoPlay="true"
-                    android:layout_width="100dp"
+                    android:layout_width="150dp"
                     android:layout_height="100dp"
                     app:lottie_rawRes="@raw/story"/>
 
@@ -119,7 +118,7 @@
         android:layout_marginLeft="10dp"
         android:layout_marginRight="10dp"
         ads:adSize="BANNER"
-        ads:adUnitId="ca-app-pub-3940256099942544/6300978111">
+        ads:adUnitId="ca-app-pub-1905179364235619/2634194205">
     </com.google.android.gms.ads.AdView>
 
 </LinearLayout>

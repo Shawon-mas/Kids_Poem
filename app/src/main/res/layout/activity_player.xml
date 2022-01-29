@@ -10,14 +10,28 @@
        android:id="@+id/youtube_player_view"
        android:layout_width="match_parent"
        android:layout_height="wrap_content"
+       app:showYouTubeButton="false"
        app:showFullScreenButton="true" />
-   <androidx.recyclerview.widget.RecyclerView
-       android:id="@+id/recycler_view_video_list"
+
+   <RelativeLayout
        android:layout_below="@id/youtube_player_view"
        android:layout_width="match_parent"
-       android:layout_height="wrap_content"
-       android:layout_margin="10dp"
-       android:padding="10dp"/>
+       android:layout_height="wrap_content">
+      <androidx.recyclerview.widget.RecyclerView
+          android:id="@+id/recycler_view_video_list"
+
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_margin="10dp"
+          android:padding="10dp"/>
+      <com.pluscubed.recyclerfastscroll.RecyclerFastScroller
+          android:id="@+id/scroll_bar_player"
+          android:layout_width="wrap_content"
+          android:layout_height="match_parent"
+          android:layout_alignParentEnd="true"
+          android:layout_alignParentRight="true"/>
+   </RelativeLayout>
+
    <com.google.android.gms.ads.AdView
        xmlns:ads="http://schemas.android.com/apk/res-auto"
        android:id="@+id/adView_layer"
@@ -28,7 +42,7 @@
        android:layout_marginLeft="10dp"
        android:layout_marginRight="10dp"
        ads:adSize="BANNER"
-       ads:adUnitId="ca-app-pub-3940256099942544/6300978111">
+       ads:adUnitId="ca-app-pub-1905179364235619/2634194205">
    </com.google.android.gms.ads.AdView>
 
 

@@ -34,14 +34,17 @@ import com.kidspoem.kidspoem.adapter.VideoTittle;
 import com.pierfrancescosoffritti.androidyoutubeplayer.core.player.YouTubePlayer;
 import com.pierfrancescosoffritti.androidyoutubeplayer.core.player.listeners.AbstractYouTubePlayerListener;
 import com.pierfrancescosoffritti.androidyoutubeplayer.core.player.views.YouTubePlayerView;
+import com.pluscubed.recyclerfastscroll.RecyclerFastScroller;
 
 import java.util.ArrayList;
 import java.util.List;
 
 import es.dmoral.toasty.Toasty;
 
+import static com.kidspoem.kidspoem.R.color.black;
+
 public class PlayerActivity extends AppCompatActivity implements ClickItem {
-RecyclerView recyclerView;
+   RecyclerView recyclerView;
     List<VideoTittle> videoTittles;
     VideoAdapter adapter;
     private YouTubePlayerView youTubePlayerView;
@@ -50,6 +53,7 @@ RecyclerView recyclerView;
     private FirebaseFirestore db = FirebaseFirestore.getInstance();
     private CollectionReference mRef=db.collection("VideoList");
     private AdView adView_player;
+    RecyclerFastScroller fastScroller;
 
 
 
@@ -58,9 +62,10 @@ RecyclerView recyclerView;
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_player);
         recyclerView=findViewById(R.id.recycler_view_video_list);
-
+        fastScroller=findViewById(R.id.scroll_bar_player);
          recyclerView.setHasFixedSize(true);
-          videoTittles=new ArrayList<VideoTittle>();
+        fastScroller.attachRecyclerView(recyclerView);
+        videoTittles=new ArrayList<VideoTittle>();
          youTubePlayerView = findViewById(R.id.youtube_player_view);
 
 
